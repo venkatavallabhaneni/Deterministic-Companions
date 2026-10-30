@@ -1,8 +1,8 @@
-﻿# Claude handoff: Deterministic Companions
+# Deterministic Companions
 
-This is the source handoff for **Deterministic Companions 1.24.0**, a Fabric mod for Minecraft Java Edition **26.2**. It creates server-authoritative fake players that perform deterministic movement, mining, building, combat, protection and area-guard tasks. The project uses Java 25 and Fabric; it has no machine learning, external services, or Baritone dependency.
+**Deterministic Companions** is a Fabric mod for Minecraft Java Edition **26.2**. It creates server-authoritative fake players that perform deterministic movement, mining, building, combat, protection and area-guard tasks. The project uses Java 25 and Fabric; it has no machine learning, external services, or Baritone dependency.
 
-## Start here
+## Documentation
 
 - Read [PROJECT_README.md](PROJECT_README.md) for the full setup and feature overview.
 - Read [COMMANDS.md](COMMANDS.md) for the command reference.
@@ -18,7 +18,7 @@ Requires JDK 25. From this folder run:
 .\gradlew.bat clean build
 ```
 
-The build runs the JUnit suite. The last completed build for this handoff passed **322 tests**. Gradle wrapper version: 9.5.1. Minecraft 26.2, Fabric Loader 0.19.3, Fabric API 0.156.0+26.2, Fabric Loom 1.17.20.
+The build runs the JUnit suite. It currently runs **322 tests**. Gradle wrapper version: 9.5.1. Minecraft 26.2, Fabric Loader 0.19.3, Fabric API 0.156.0+26.2, Fabric Loom 1.17.20.
 
 The installable compiled mod is attached to each [GitHub release](https://github.com/venkatavallabhaneni/Deterministic-Companions/releases) (`deterministic-companions-<version>.jar`); `./gradlew build` produces it locally in `build/libs/`. The project can also build a development server with:
 
@@ -51,6 +51,10 @@ Put the compiled mod JAR and Fabric API in the server's `mods` folder. To use Fa
 
 Falcon uses one independent flying slot in addition to four ordinary companions. Automatic Falcon hunting chooses visible hostile mobs with open sky above them; its R-key stick can designate any visible mob within its allowed range. Both ground and flight search are bounded and run on the server thread.
 
-## Handoff contents and cache cleanup
+## Repository contents
 
-This handoff contains the source, resources, tests, documentation, Gradle wrapper and metadata, plus the three built artifacts in `artifacts/`. Generated `.gradle`, `build`, runtime `run`, empty logs, and local `.tools` API inspection scratch files were excluded. No Minecraft world saves or runtime server files were copied. The original project and its caches were left untouched.
+The repository holds the source, resources, tests, documentation and Gradle wrapper. Build output (`build/`, `.gradle/`), runtime folders (`run/`, `logs/`) and built jars are not committed; compiled jars are published on the releases page.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
