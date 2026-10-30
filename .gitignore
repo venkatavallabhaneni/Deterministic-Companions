@@ -1,0 +1,11 @@
+.gradle/
+build/
+run/
+.idea/
+*.iml
+dist/
+.tools/
+logs/
+artifacts/
+fabric-versions.json
+fabric-api-versions.xml

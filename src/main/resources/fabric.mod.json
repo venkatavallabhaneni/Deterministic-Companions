@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "deterministic_companions",
+  "version": "${version}",
+  "name": "Deterministic Companions",
+  "license": "MIT",
+  "description": "Four ordinary server players plus one flying hunter with deterministic navigation and combat.",
+  "environment": "*",
+  "entrypoints": { "main": ["dev.companions.CompanionsMod"], "client": ["dev.companions.client.CompanionsClient"] },
+  "depends": { "fabricloader": ">=0.19.3", "minecraft": "26.2", "java": ">=25", "fabric-api": "*" }
+}
